@@ -17,10 +17,10 @@ code {
 }
 
 .App {
-  background-color: #F5F8FA;
+  background-color: #CED9E0;
   height: 100vh;
   &.bp3-dark {
-    background-color: #30404D;
+    background-color: #293742;
   }
 }
 
@@ -28,4 +28,13 @@ $a-tags: 'a, a:active, a:hover, a:visited, a:active, a:hover';
 #{$a-tags} .navButton {
   text-decoration: none;
   color: #f5f8fa !important;
+}
+
+.mainElement {
+  background-color: #F5F8FA;
+  box-shadow: 0 0 0 1px rgba(16,22,26,.15), 0 0 0 rgba(16,22,26,0), 0 0 0 rgba(16,22,26,0);
+  .bp3-dark & {
+    background-color: #30404D;
+    box-shadow: 0 0 0 1px rgba(16,22,26,.4), 0 0 0 rgba(16,22,26,0), 0 0 0 rgba(16,22,26,0)
+  }
 }

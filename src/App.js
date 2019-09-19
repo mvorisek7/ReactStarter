@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import MainGrid from './containers/MainGrid';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import SideBar from './components/SideBar/SideBar';
 
 function Index() {
   return <h2>Home</h2>;
@@ -24,11 +25,12 @@ function App() {
     <div className={`App ${theme === 'dark' && 'bp3-dark'}`}>
       <Router>
         <MainGrid>
-          <NavBar />
+          <NavBar name="navBar"/>
+          <SideBar name="sideBar"/>
           <Switch>
-            <Route path="/" exact component={Index} />
-            <Route path="/about/" component={About} />
-            <Route path="/users/" component={Users} />
+            <Route name="main" path="/" exact component={Index} />
+            <Route name="main" path="/about/" component={About} />
+            <Route name="main" path="/users/" component={Users} />
           </Switch>
         </MainGrid>
       </Router>
