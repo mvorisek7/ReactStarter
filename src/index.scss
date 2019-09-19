@@ -27,7 +27,11 @@ code {
 $a-tags: 'a, a:active, a:hover, a:visited, a:active, a:hover';
 #{$a-tags} .navButton {
   text-decoration: none;
-  color: #f5f8fa !important;
+  color: #182026 !important;
+
+  .bp3-dark & {
+    color: #f5f8fa !important;
+  }
 }
 
 .mainElement {
